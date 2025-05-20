@@ -4,7 +4,7 @@ This is a basic example of implementing a 2-layer neural network using only NumP
 
 **❗Important: The core idea is adjusting the values of parameters to make Loss Function (Mean Squared Error (MSE)) minimal. If the derivative is positive, meaning the parameter value making the loss function getting larger, then reduce the parameter value. On the other hand, if derivative is negative, meaning the parameter value making the loss function getting smaller, then increase the parameter value to make loss function even smaller.**
 
-**Why using derivatives? Think of every parameter has contribution to loss function. Minimising each parameter's contribution will eventually make the loss function value minimal.**
+**Why using derivatives? Think of every parameter has contribution to loss function. Minimising each parameter's contribution will eventually make the loss function value minimal. Derivative's chain rule is applied to simplify calculations.**
 
 ## 🧠 Network Architecture
 
