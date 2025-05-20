@@ -2,6 +2,8 @@
 
 This is a basic example of implementing a 2-layer neural network using only NumPy. It demonstrates how to train the network by performing forward propagation, manual backpropagation (gradient computation), and parameter updates to fit a nonlinear target function.
 
+**❗Important: The core idea is adjusting the values of parameters to make Loss Function (Mean Squared Error (MSE)) minimal. If the derivitive is positive, meaning the parameter value making the loss function getting larger, then reduce the parameter value. On the other hand, if derivitive is negative, meaning the parameter value making the loss function getting smaller, then increase the parameter value to make loss function even smaller.**
+
 ## 🧠 Network Architecture
 
 A feedforward neural network with one hidden layer:
@@ -17,10 +19,7 @@ x ──► [Linear: a0 + a1x] ──► [Activation] ──► [Linear: b0 + b1
 
 ## 🔧 Features
 
-- Supports different activation functions:
-  - `sigmoid`
-  - `tanh`
-  - `relu`
+- Supports activation function: `relu`
 - Manual backpropagation with explicit gradient formulas
 - Batch training with multiple epochs
 - Mean Squared Error loss computation
@@ -35,6 +34,4 @@ inputs  = np.array([0.7853, 1.57])
 targets = np.array([0.707, 1.0])
 beta    = 0.1           # Learning rate
 epochs  = 50            # Number of training epochs
-activation_type = "tanh"  # Options: "sigmoid", "tanh", "relu"
-
 ```
