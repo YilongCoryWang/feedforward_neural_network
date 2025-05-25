@@ -1,39 +1,72 @@
-# Simple 2-Layer Neural Network from Scratch (NumPy)
+# Feedforward Neural Network with PyTorch
 
-This is a basic example of implementing a 2-layer neural network using only NumPy. It demonstrates how to train the network by performing forward propagation, manual backpropagation (gradient computation), and parameter updates to fit a nonlinear target function.
+This repository provides hands-on examples of building and training feedforward neural networks using PyTorch. It includes two Jupyter notebooks that demonstrate the implementation and training of neural networks on synthetic datasets.
 
-**❗Important: The core idea is adjusting the values of parameters to make Loss Function (Mean Squared Error (MSE)) minimal. If the derivative is positive, meaning the parameter value making the loss function getting larger, then reduce the parameter value. On the other hand, if derivative is negative, meaning the parameter value making the loss function getting smaller, then increase the parameter value to make loss function even smaller.**
+## Contents
 
-**Why using derivatives? Think of every parameter has contribution to loss function. Minimising each parameter's contribution will eventually make the loss function value minimal. Derivative's chain rule is applied to simplify calculations.**
+- **`1. simple_feedforward_nn.ipynb`**: Introduces the basics of constructing a simple feedforward neural network using PyTorch. It covers:
 
-## 🧠 Network Architecture
+  - Defining the network architecture
+  - Forward propagation
+  - Loss computation
+  - Backpropagation and parameter updates
+  - Training on a synthetic dataset
 
-A feedforward neural network with one hidden layer:
+- **`2. feedforward_nn_with_validation.ipynb`**: Expands upon the first notebook by incorporating:
+  - Validation dataset evaluation
+  - Tracking training and validation loss over epochs
+  - Plotting loss curves for performance visualization
+  - Implementing early stopping criteria
 
-x ──► [Linear: a0 + a1x] ──► [Activation] ──► [Linear: b0 + b1y] ──► [Activation] ──► z
+## Getting Started
 
-- **Input**: Scalar input `x`
-- **Hidden Layer**: Linear transformation + activation
-- **Output Layer**: Linear transformation + activation
-- **Loss Function**: Mean Squared Error (MSE)
+### Prerequisites
 
----
+- Python 3.7 or higher
+- PyTorch
+- Jupyter Notebook
+- NumPy
+- Matplotlib
 
-## 🔧 Features
+### Installation
 
-- Supports activation function: `relu`
-- Manual backpropagation with explicit gradient formulas
-- Batch training with multiple epochs
-- Mean Squared Error loss computation
-- `matplotlib` for visualizing training loss
+1. **Clone the repository:**
 
----
+   ```bash
+   git clone https://github.com/YilongCoryWang/feedforward_neural_network.git
+   cd feedforward_neural_network
+   ```
 
-## 🧪 Example Configuration
+2. **Install the required packages:**
 
-```python
-inputs  = np.array([0.7853, 1.57])
-targets = np.array([0.707, 1.0])
-beta    = 0.1           # Learning rate
-epochs  = 50            # Number of training epochs
-```
+   It's recommended to use a virtual environment:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+   Note: If requirements.txt is not provided, manually install the necessary packages:
+
+   ```bash
+   pip install torch torchvision matplotlib numpy jupyter
+   ```
+
+   Launch Jupyter Notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+
+   Navigate to the cloned repository folder and open the desired notebook.
+
+## Usage
+
+1. **Run the notebook cells sequentially:**
+
+   Each notebook is structured to guide you through the process of building and training a feedforward neural network. Execute each cell in order to follow along with the implementation and observe the results.
+
+2. **Modify parameters as needed:**
+
+   Feel free to adjust hyperparameters such as learning rate, number of epochs, and network architecture to experiment with the model's performance.
