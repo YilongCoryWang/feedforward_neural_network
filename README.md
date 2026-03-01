@@ -12,11 +12,12 @@ This repository provides hands-on examples of building and training feedforward 
   - Backpropagation and parameter updates
   - Training on a synthetic dataset
 
-- **`2. feedforward_nn_with_validation.ipynb`**: Expands upon the first notebook by incorporating:
-  - Validation dataset evaluation
-  - Tracking training and validation loss over epochs
-  - Plotting loss curves for performance visualization
-  - Implementing early stopping criteria
+- **`2. neural_network_pytorch.ipynb`**: Implements the first notebook with Pytorch:
+  - PyTorch Dataset and DataLoader for efficient data handling
+  - Training loop with epoch and batch iteration
+  - Tracking training loss over epochs
+  - Plotting training loss curves for performance visualization
+  - GPU acceleration support (if available)
 
 ## Getting Started
 
